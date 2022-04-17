@@ -1,0 +1,77 @@
+@BASE_URL = http://localhost:3000/
+
+//insert create
+POST {{BASE_URL}}book/insert
+Content-Type: application/json
+
+{
+	"book_name":"book 6",
+	"ideas":"iyi hoş",
+	"author": "uncnow",
+	"imgUrl":"https://cdn.dsmcdn.com/ty172/product/media/images/20210911/9/128977442/8520926/1/1_org_zoom.jpg",
+	"publisher_editor":"adasd"
+	
+}
+
+
+###
+//get All
+GET {{BASE_URL}}book/getAllBook
+
+
+
+###
+//PAtCh
+PATCH  {{BASE_URL}}book/patch/1
+Content-Type: application/json
+
+{
+    "id":"1",
+	"book_name":"Billy Summers",
+	"ideas":" Tekinsiz hayal gücünü, dizginlenemez güce çeviren” efsanevi yazar Stephen King’den, profesyonel bir katil üzerine heyecan verici bir roman.\n \nBilly Summers dünyanın en iyi kiralık katili, madalyalı bir Irak Savaşı gazisi, izini kaybettirmede sihirbaz Houdini kadar hünerli bir keskin nişancı. Ancak sadece gerçekten “kötü” adamları hedef alan bu amansız katil artık emekliye ayrılmak istiyor. Bundan önceyse son atışını yapıp kötülük timsali bir adamı haklamalı. Sonrasında sırra kadem basacak. Peki bu süreçte ne yanlış gidebilir ki? Muhtemelen her şey.\n \nStephen King’in son şaheseri Billy Summers, hem bir savaş hikâyesi, hem de Amerika’nın küçük kasabalarına ve orada yaşayan insanlara yazılmış bir aşk mektubu. Eli kanlı bir intikam romanı. Aşk, şans, kader ve kurtuluş için tek atımlık kurşunu kalmış karmaşık u kalmış karmaşık bir kahramanın karanlık hikâyesi.\n \nBu romanı elinizden bırakamayacak ve Billy’yi asla unutamayacaksınız.\nNew York Times\n\nÇok Satanlar Listesinde Bir Numara\nEsquire\n\nYılın En İyi Kitabı\nWall Street Journal",
+	"author": "updated",
+	"imgUrl":"https://cdn.dsmcdn.com/ty172/product/media/images/20210911/9/128977442/8520926/1/1_org_zoom.jpg",
+	"publisher_editor":"ALTIN KİTAPLAR"
+}
+
+###
+//DELETE
+DELETE {{BASE_URL}}book/delete/8
+
+
+###
+POST {{BASE_URL}}user/register
+Content-Type: application/json
+
+{
+	"user_name":"test1",
+	"user_lastname":"test1",
+	"user_email": "test@mail.com",
+	"user_password":"123456",
+	"user_book_list":[]
+}
+
+###
+//PAtCh
+PATCH  {{BASE_URL}}user/patch/5
+Content-Type: application/json
+
+{
+	"id": "5",
+	"user_name":"onurcan",
+	"user_lastname":" kurum",
+	"user_email": "onurcan@mail.com",
+	"user_password":"123456",
+	"user_book_list":[]
+}
+
+###
+POST {{BASE_URL}}user/login
+Content-Type: application/json
+
+{
+	
+	"user_email": "ali@gmail.com",
+	"user_password":"1sdasd23456"
+	
+}
